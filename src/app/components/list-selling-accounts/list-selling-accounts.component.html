@@ -1,0 +1,26 @@
+<h3>List Selling Accounts</h3>
+<table class="table table-striped">
+<thead>
+<tr>
+  <th>Username</th>
+  <th>Password</th>
+  <th>Products</th>
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let company of sellingCompanies">
+  <td>{{ company.username }}</td>
+  <td>{{ company.password }}</td>
+  <td>{{ company.state }}</td>
+  <td>
+    <ul>
+      <li *ngFor="let product of company.products">
+        {{ product.name }}: {{ product.price }}
+      </li>
+    </ul>
+  </td>
+</tr>
+</tbody>
+</table>
+
+<button (click)="gotoAdminMenu(username)" class="btn btn-success">Back to Admin Menu</button>

@@ -1,0 +1,32 @@
+<h3>List Shipping Accounts</h3>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Username</th>
+    <th>Password</th>
+    <th>Supported Regions</th>
+<!--    <th>Orders</th>-->
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let company of shippingCompanies">
+    <td>{{ company.username }}</td>
+    <td>{{ company.password }}</td>
+    <td>
+      <ul>
+        <li *ngFor="let region of company['Supported Regions']">{{ region['Region Name'] }}</li>
+      </ul>
+    </td>
+<!--    <td>-->
+<!--      <ul>-->
+<!--        <li *ngFor="let order of company.orders">-->
+<!--          {{ order.id }}: {{ order.status }}-->
+<!--        </li>-->
+<!--      </ul>-->
+<!--    </td>-->
+  </tr>
+  </tbody>
+</table>
+
+<button (click)="gotoAdminMenu(username)" class="btn btn-success">Back to Admin Menu</button>

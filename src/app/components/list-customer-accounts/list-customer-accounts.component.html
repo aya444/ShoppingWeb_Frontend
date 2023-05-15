@@ -1,0 +1,31 @@
+<h3>List Customer Accounts</h3>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>State</th>
+<!--    <th>Orders</th>-->
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let customer of customers">
+    <td>{{ customer.custName }}</td>
+    <td>{{ customer.custEmail }}</td>
+    <td>{{ customer.custState }}</td>
+<!--    <td>-->
+<!--      <ul>-->
+<!--        <ng-container *ngFor="let order of customer.orders" >-->
+<!--          <li>-->
+<!--            {{ order['Order Id'] }}: {{ order['Order Status'] }}-->
+<!--          </li>-->
+<!--        </ng-container>-->
+<!--        <li *ngIf="!customer.orders || customer.orders.length == 0">-->
+<!--          No orders found.-->
+<!--        </li>-->
+<!--      </ul>-->
+<!--    </td>-->
+  </tr>
+  </tbody>
+</table>
+<button (click)="gotoAdminMenu(username)" class="btn btn-success">Back to Admin Menu</button>

@@ -1,0 +1,19 @@
+<h2>Products on Sale</h2>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Status</th>
+    <th>Price</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let product of products">
+    <td>{{ product.name }}</td>
+    <td>{{ product.status }}</td>
+    <td>{{ product.price }}</td>
+  </tr>
+  </tbody>
+</table>
+
+<button (click)="gotoSellingMenu(username)" class="btn btn-success">Back to Selling Menu</button>

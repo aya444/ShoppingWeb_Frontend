@@ -1,0 +1,20 @@
+<div class="container">
+  <h2>Create Shipping Company</h2>
+  <form (ngSubmit)="createShippingCompany()">
+    <div class="form-group">
+      <label for="companyName">Name:</label>
+      <input type="text" class="form-control" id="companyName" [(ngModel)]="customer.custName" name="companyName" required>
+    </div>
+    <div class="form-group">
+      <label for="address">Email:</label>
+      <input type="text" class="form-control" id="email" [(ngModel)]="customer.custEmail" name="address" required>
+    </div>
+    <div class="form-group">
+      <label for="address">Password:</label>
+      <input type="password" class="form-control" id="address" [(ngModel)]="customer.custPassword" name="address" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <br>
+  <button (click)="gotToCustomerFirstMenu()" class="btn btn-success">Back to login</button>
+</div>

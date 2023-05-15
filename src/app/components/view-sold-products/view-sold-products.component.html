@@ -1,0 +1,25 @@
+<h2>Previously Sold Products</h2>
+<div *ngIf="products.length > 0">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Order ID</th>
+      <th>Product ID</th>
+      <th>Product Names</th>
+      <th>Customer ID</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{ product.orderId }}</td>
+      <td>{{ product.productId }}</td>
+      <td>{{ product.productNames }}</td>
+      <td>{{ product.customerId }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<div *ngIf="products.length === 0">
+  No products found.
+</div>
+<button (click)="gotoSellingMenu(username)" class="btn btn-success">Back to Selling Menu</button>
